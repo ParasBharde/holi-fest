@@ -18,13 +18,13 @@ export default function HoliExperience() {
   const cardRef = useRef<HTMLDivElement | null>(null);
   const auraRef = useRef<HTMLDivElement | null>(null);
 
-  const sceneRef = useRef<THREE.Scene | null>(null);
-  const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
-  const cameraRef = useRef<THREE.PerspectiveCamera | null>(null);
-  const pointsRef = useRef<THREE.Points | null>(null);
+  const sceneRef = useRef<any>(null);
+  const rendererRef = useRef<any>(null);
+  const cameraRef = useRef<any>(null);
+  const pointsRef = useRef<any>(null);
   const positionsRef = useRef<Float32Array | null>(null);
   const velocitiesRef = useRef<Float32Array | null>(null);
-  const materialRef = useRef<THREE.PointsMaterial | null>(null);
+  const materialRef = useRef<any>(null);
   const rafRef = useRef<number | null>(null);
 
   const [name, setName] = useState('');

@@ -85,10 +85,13 @@ export default function HoliExperience() {
     const points = new THREE.Points(geometry, pointsMaterial);
     scene.add(points);
 
-    const halo = new THREE.Mesh(
-      new THREE.RingGeometry(0.7, 1.1, 80),
-      new THREE.MeshBasicMaterial({ color: new THREE.Color(personalColor), transparent: true, opacity: 0.6 })
-    );
+    const haloMaterial = new THREE.MeshBasicMaterial({
+      color: new THREE.Color(personalColor),
+      transparent: true,
+      opacity: 0.6
+    });
+
+    const halo = new THREE.Mesh(new THREE.RingGeometry(0.7, 1.1, 80), haloMaterial);
     scene.add(halo);
 
     gsap.to(halo.scale, { x: 7, y: 7, duration: 2.5, ease: 'expo.out' });
@@ -123,7 +126,7 @@ export default function HoliExperience() {
         geometry.dispose();
         pointsMaterial.dispose();
         halo.geometry.dispose();
-        (halo.material as THREE.Material).dispose();
+        haloMaterial.dispose();
       }
     };
 

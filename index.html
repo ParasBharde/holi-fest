@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Holi 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Animated gradient + particle canvas layers -->
+    <div class="gradient-bg" aria-hidden="true"></div>
+    <canvas id="powderCanvas" aria-hidden="true"></canvas>
+
+    <!-- Mouse-follow glow -->
+    <div id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Main fullscreen hero section -->
+    <main class="hero">
+      <section class="glass-card entrance" role="region" aria-label="Holi greeting">
+        <p class="eyebrow">Festival of Colors • 2026</p>
+        <h1 class="title" aria-label="Happy Holi">
+          <span>Happy</span>
+          <span>Holi</span>
+        </h1>
+        <p class="subtitle">Let the Colors Fly</p>
+
+        <p id="quote" class="quote" aria-live="polite">
+          “Bura na mano, Holi hai!”
+        </p>
+
+        <button id="throwColorsBtn" class="throw-btn" type="button">
+          Throw Colors
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer entrance-delay">Made with color, joy, and festive vibes ✨</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

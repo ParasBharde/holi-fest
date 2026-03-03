@@ -249,11 +249,17 @@ export default function HoliExperience() {
 
       <section className="relative z-10 mx-auto flex h-screen w-full max-w-6xl items-center justify-center px-6">
         <div ref={cardRef} className="glass w-full max-w-4xl rounded-3xl p-8 text-center transition-transform duration-150 md:p-12">
-          <p className="text-xs uppercase tracking-[0.25em] text-cyan-200">Single Hero • Scroll Controlled</p>
-          <h1 className="mt-2 text-4xl font-bold md:text-6xl">Holi Parallax Supernova</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-slate-200">
-            Same hero page, no section jumps. Enter your name once, then scroll to evolve the scene from Identity → Ignition → Resonance → Supernova.
-          </p>
+         <p className="text-xs uppercase tracking-[0.25em] text-cyan-200">
+           One Universe • Scroll to Transform
+         </p>
+
+        <h1 className="mt-2 text-4xl font-bold md:text-6xl">
+           The Holi Universe
+       </h1>
+
+       <p className="mx-auto mt-4 max-w-2xl text-slate-200">
+          One living hero screen. No navigation, no escapes. Enter your name and scroll to evolve the world from Identity → Ignition → Resonance → Supernova.
+       </p>
 
           {!started ? (
             <form onSubmit={startJourney} className="mx-auto mt-8 flex max-w-lg flex-col gap-4 sm:flex-row">

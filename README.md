@@ -45,3 +45,9 @@ Production-ready single-page Holi web experience with protected admin dashboard.
 - Admin credentials validated server-side in API route.
 - httpOnly session cookie with JWT signature.
 - Middleware protects `/admin/*` except `/admin` login page.
+
+## Vercel Deployment Note
+- Do **not** set Output Directory to `dist` for this project.
+- Use Vercel framework preset **Next.js** and leave Output Directory default (or set to `.next`).
+- Build command: `npm run build`
+

@@ -1,6 +1,6 @@
 'use client';
 
-import { FormEvent, useEffect, useMemo, useRef, useState } from 'react';
+import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { gsap } from 'gsap';
 
@@ -158,7 +158,7 @@ export default function HoliExperience() {
     return () => window.removeEventListener('mousemove', onPointerMove);
   }, []);
 
-  const applyStage = (nextStage: number) => {
+  const applyStage = useCallback((nextStage: number) => {
     const material = materialRef.current;
     const points = pointsRef.current;
     if (!material || !points) return;
@@ -197,7 +197,7 @@ export default function HoliExperience() {
       setChallenge({ target: answer, options });
       setChallengeResult('');
     }
-  };
+  }, [personalColor]);
 
   useEffect(() => {
     if (!started || !rootRef.current) return;
@@ -221,7 +221,7 @@ export default function HoliExperience() {
     const node = rootRef.current;
     node.addEventListener('wheel', onWheel, { passive: false });
     return () => node.removeEventListener('wheel', onWheel);
-  }, [started, personalColor]);
+  }, [applyStage, started]);
 
   const startJourney = async (event: FormEvent) => {
     event.preventDefault();

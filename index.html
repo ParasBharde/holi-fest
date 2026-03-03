@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Holi 2026 • Color Blitz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="gradient-bg" aria-hidden="true"></div>
+    <canvas id="powderCanvas" aria-hidden="true"></canvas>
+    <div id="cursorGlow" aria-hidden="true"></div>
+
+    <main class="hero">
+      <!-- Step-wise onboarding + start flow -->
+      <section id="setupPanel" class="glass-card entrance setup-panel" role="dialog" aria-labelledby="setupTitle">
+        <p class="eyebrow">Holi Color Blitz 2026</p>
+        <h1 id="setupTitle" class="setup-title">Enter your name to start</h1>
+        <p class="setup-copy">Play a 20-second splash game. Every click throws color and earns points.</p>
+        <form id="playerForm" class="player-form">
+          <label for="playerName" class="sr-only">Player name</label>
+          <input id="playerName" name="playerName" type="text" maxlength="32" placeholder="Your festive name" required />
+          <button id="startGameBtn" class="throw-btn" type="submit">Start Holi Game</button>
+        </form>
+      </section>
+
+      <section id="gamePanel" class="glass-card game-panel hidden" role="region" aria-label="Holi game panel">
+        <p class="eyebrow">Festival of Colors • 2026</p>
+        <h2 class="title" aria-label="Happy Holi">
+          <span>Happy</span>
+          <span>Holi</span>
+        </h2>
+        <p class="subtitle">Let the Colors Fly</p>
+        <p id="quote" class="quote" aria-live="polite">“Bura na mano, Holi hai!”</p>
+
+        <div class="hud">
+          <p><strong>Player:</strong> <span id="playerLabel">Guest</span></p>
+          <p><strong>Score:</strong> <span id="scoreLabel">0</span></p>
+          <p><strong>Time:</strong> <span id="timeLabel">20</span>s</p>
+        </div>
+
+        <button id="throwColorsBtn" class="throw-btn" type="button">Throw Colors</button>
+        <button id="restartBtn" class="ghost-btn" type="button">Play Again</button>
+      </section>
+
+      <aside class="leaderboard glass-card hidden" id="leaderboard" aria-live="polite">
+        <h3>Top Color Champs</h3>
+        <ol id="leaderboardList"></ol>
+      </aside>
+
+      <button id="bonusOrb" class="bonus-orb hidden" type="button" aria-label="Bonus color orb">+5</button>
+    </main>
+
+    <footer class="footer entrance-delay">Made with color, joy, and festive vibes ✨</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
